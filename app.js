@@ -122,7 +122,6 @@ divis(a, b);
 /**
  * function step 3
  */
-
 const player = {
     name: "joker",
     sayHello: function(otherPersonsName = "nobody") {
@@ -132,3 +131,106 @@ const player = {
 
 player.sayHello();
 player.sayHello("jeongin");
+
+/**
+ * colculator obj
+ */
+const colculator = {
+    add: function(a = 1, b = 1) {
+        return a + b;
+    },
+    minus: function(a = 1, b = 1) {
+        return a - b;
+    },
+    multi: function(a = 1, b = 1) {
+        return a * b;
+    },
+    divis: function(a = 1, b = 1) {
+        return a / b;
+    },
+    power: function(a = 2, b = 1) {
+        return a ** b;
+    }
+};
+
+const cal = colculator;
+
+console.log(cal.add(20, 5));
+console.log(cal.minus(20, 5));
+console.log(cal.multi(20, 5));
+console.log(cal.divis(20, 5));
+console.log(cal.power(20, 5));
+
+/**
+ * Conditionals and if 
+ */
+/*
+const age = prompt("How old are you?");
+
+console.log(age);
+console.log(typeof age);
+
+convert_of_age = parseInt(age);
+
+if (isNaN(age) || age < 0) {
+    console.log("Please write a number");
+} else if (age < 18) {
+    console.log("You are too young");
+} else if (age >= 18 && age <= 50) {
+    console.log("You can drink");
+} else if (age > 50 && age <= 80) {
+    console.log("You should exercise");
+} else if (age > 80) {
+    console.log("You can do whatever you want")
+}
+*/
+
+/**
+ * Javascript and html
+ */
+//document.title = "hello js";
+
+/**
+ * getElementById
+ */
+const title = document.getElementById("title");
+console.log(title);
+title.innerText = "Hi~";
+console.log(title);
+
+/**
+ * Searching For Elements
+ */
+const hellos = document.getElementsByClassName("hello");
+const title_2 = document.getElementsByTagName("h1");
+
+console.log(hellos);
+console.log(title_2);
+
+const title_1 = document.querySelector(".hello h1");
+console.log(title_1);
+
+const title_all = document.querySelectorAll(".hello h1");
+console.log(title_all)
+
+/**
+ * Events
+ */
+
+function handleTitleClick() {
+    console.log("title was clicked!");
+}
+
+
+
+function handleMouseEnter() {
+    title_1.style.color = "blue";
+}
+
+function handleMouseLeave() {
+    title_1.style.color = "black";
+}
+
+title_1.addEventListener("click", handleTitleClick);
+title_1.addEventListener("mouseenter", handleMouseEnter);
+title_1.addEventListener("mouseleave", handleMouseLeave);
